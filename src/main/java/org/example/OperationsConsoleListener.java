@@ -36,7 +36,7 @@ public class OperationsConsoleListener {
     }
 
     private ConsolOperationType listenNextOperation() {
-        System.out.println("Введите операцию: ");
+        System.out.println("Enter operation: ");
         printAllAvailableOperations();
         System.out.println();
         while (!Thread.currentThread().isInterrupted()) {

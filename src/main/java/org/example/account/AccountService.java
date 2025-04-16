@@ -52,7 +52,7 @@ if (moneyToDeposit <= 0) {
             throw new IllegalArgumentException("Cannot withdraw not positive amount".formatted(amountToWithdraw));
         }
         if (account.getMoneyAmmount() < amountToWithdraw) {
-            throw new IllegalArgumentException("денег меньше, чем пытаетесь списать"
+            throw new IllegalArgumentException("less money than you are trying to write off"
                     .formatted(amountToWithdraw));
         }
         account.setMoneyAmmount(account.getMoneyAmmount() - amountToWithdraw);
@@ -83,7 +83,7 @@ if (moneyToDeposit <= 0) {
             throw new IllegalArgumentException("Cannot transfer not positive amount".formatted(amountToTransfer));
         }
         if (accountFrom.getMoneyAmmount() < amountToTransfer) {
-            throw new IllegalArgumentException("денег меньше, чем пытаетесь списать");
+            throw new IllegalArgumentException("less money than you are trying to write off");
         }
         int totalAmountToDeposit = accountTo.getUserId() != accountFrom.getUserId()
                ? (int) (amountToTransfer - amountToTransfer * accountProperties.getTransferCommission())

@@ -19,7 +19,7 @@ public class CreateUserProcessor implements OperationCommandProcessor {
 
     @Override
     public void processOperation() {
-        System.out.println("Введите логин");
+        System.out.println("Enter login");
         String login = scanner.nextLine();
         User user = userService.createUser(login);
         System.out.println("user created" + user.toString());
